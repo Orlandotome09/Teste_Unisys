@@ -14,10 +14,11 @@ private static WebDriver driver;
     @Before
     public void beforeCenario(){
 
-        //System.setProperty("webdriver.chrome.driver","src//test//resources//Driver//chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
+        System.setProperty("webdriver.chrome.driver","src//test//resources//drivers//chromedriver.exe");
+       // ChromeOptions options = new ChromeOptions();
 
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
+        driver.get("https://www2.correios.com.br/sistemas/rastreamento/default.cfm");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 

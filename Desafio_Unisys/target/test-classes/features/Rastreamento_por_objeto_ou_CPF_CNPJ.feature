@@ -5,13 +5,12 @@ Como usuário do sistema, eu quero consultar as informações sobre uma entrega do 
 Para que eu possa acompanhar o andamento da entrega
 
 Contexto: 
-  Dado que eu acesso o site dos correios
-  E acesso a pagina de rastreamento de objetos
+  Dado que eu acesso o site dos Correios na tela de Restreamento
   
   Cenario: Rastreamento por objeto postado
     Dado que informo um objeto valido "JY183171564BR"
     Quando eu Clicar no botao buscar 
-    Entao o status da entrega deve ser "Entregue 20/02/2020" 
+    Entao o status da entrega deve ser entregue "20/02/2020" 
     
 
   Cenario: Rastreamento por objeto invalido
