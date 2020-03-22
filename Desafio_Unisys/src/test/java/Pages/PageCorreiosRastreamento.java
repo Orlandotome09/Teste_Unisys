@@ -1,16 +1,13 @@
 package Pages;
 
 
-import Steps.TestRule;
-import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
+import Steps.TestRule;
 
 public class PageCorreiosRastreamento {
 
@@ -41,10 +38,18 @@ public class PageCorreiosRastreamento {
         TestRule.getDriver().findElement(By.id("btnPesq")).click();
 }
     
-    public static void VerificaData() {
-        TestRule.getDriver().findElement(By.id("DataEntrega")).getText();
+    public static String VerificaData() throws InterruptedException {
+    	//WebDriverWait wait= new WebDriverWait(ExpectedConditions.invisibilityOfElementLocated(By.id("DataEntrega")));
+    	Thread.sleep(tempoMedioEspera);
+    	String data = TestRule.getDriver().findElement(By.id("DataEntrega")).getText().trim();
+        return data;
 }
     
+    public static String VerificaStatusInvalido() throws InterruptedException {
+    	Thread.sleep(tempoMedioEspera);
+    	String status = TestRule.getDriver().findElement(By.id("infoMensagem")).getText().trim();
+        return status;
+}
 }
 
 

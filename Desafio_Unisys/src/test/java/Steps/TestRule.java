@@ -18,7 +18,6 @@ private static WebDriver driver;
        // ChromeOptions options = new ChromeOptions();
 
         driver = new ChromeDriver();
-        driver.get("https://www2.correios.com.br/sistemas/rastreamento/default.cfm");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
