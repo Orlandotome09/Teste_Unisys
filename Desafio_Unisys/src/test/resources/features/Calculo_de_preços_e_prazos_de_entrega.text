@@ -13,7 +13,7 @@ Contexto:
     E com as seguintes dimensoes em cm: Largura "18", Comprimento "27", Altura "9", e pesando "2"kg a ser entregue em maos "Mão própria". 
  	  Quando eu Clicar no botao Calcular
     Entao verifico "Prazo de entrega" 
-    E exibicao do "Valor" ou "Valor Total"
+    E exibicao do "Valor" ou "Valor total:"
     
 
   Cenario: Calculo de preço e prazo de entrega com Cep de origem invalido

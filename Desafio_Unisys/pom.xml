@@ -48,28 +48,20 @@
         </dependency>
         <!--FIM - Dependencias teste de GUI-->
 
+		<dependency>
+		    <groupId>com.smartbear.soapui</groupId>
+		    <artifactId>soapui</artifactId>
+		    <version>5.2.1</version>
+		</dependency>
 
     </dependencies>
     
-<build>
-	<plugins>
-		<plugin>
-			<groupId>com.smartbear.soapui</groupId>
-			<artifactId>soapui-maven-plugin</artifactId>
-			<version>5.4.0</version>
-		</plugin>
-		
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-surefire-plugin</artifactId>
-			<version>2.22.2</version>
-		</plugin>
-		
-		<plugin>
-			<groupId>org.apache.maven.surefire</groupId>
-			<artifactId>surefire-junit47</artifactId>
-			<version>2.22.2</version>
-		</plugin>
-	</plugins>
-</build>
+    <repositories>
+    <repository>
+        <id>smartbear</id>
+        <name>smartbear repository</name>
+        <url>http://smartbearsoftware.com/repository/maven2</url>
+    </repository>
+</repositories>
+
 </project>

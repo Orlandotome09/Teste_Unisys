@@ -3,6 +3,7 @@ package Pages;
 import java.awt.Checkbox;
 import java.util.List;
 import java.util.Set;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.junit.Assert;
@@ -98,14 +99,21 @@ public class PageCalculoDePreçosEPrazosDeEntrega {
 	    	 Thread.sleep(tempoCurtoEspera);
 	    	 TestRule.getDriver().findElement(By.name("Calcular")).click();
 	}
+	   
 	   public static String ValidaPrazoDeEntrega() throws InterruptedException {
+		   Thread.sleep(tempoLongoEspera);  	
+	       	
+	        String retorno = "";
+	      
+	                 
+	                    //  Alternando para a janela 
+	            	List<String> abas = new ArrayList<String>(TestRule.getDriver().getWindowHandles());
+	            	TestRule.getDriver().switchTo().window(abas.get(2));
+	            	retorno = TestRule.getDriver().findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr[2]/th")).getText();
+	            
+
+		   return retorno;
 		   
-		   WebElement tabela = TestRule.getDriver().findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table"));
-		   WebElement linhas = tabela.findElement(By.tagName("tr"));
-		   WebElement celulas = linhas.findElement(By.tagName("td"));
-		   
-		 //  String prazo =  TestRule.getDriver().findElement(By.xpath("//th")).getText();
-	    	return (celulas.getLocation(1)).getText();
 	}
 	   public static String ValidaValorTotal() throws InterruptedException {
 	    	 Thread.sleep(tempoCurtoEspera);
