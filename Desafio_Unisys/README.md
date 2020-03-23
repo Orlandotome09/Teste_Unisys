@@ -1,2 +1,3 @@
-# desafio1_2_3
-Projeto com os desafios 1, 2 e 3 
+# TessUnisys
+
+# Observação:  A automação de Teste esta sendo executada apenas pelas Classes delas Runner e RunTest

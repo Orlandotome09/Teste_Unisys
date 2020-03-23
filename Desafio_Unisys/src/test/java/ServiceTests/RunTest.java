@@ -7,7 +7,7 @@ import com.eviware.soapui.tools.*;
 
 
 public class RunTest {
-	//public  RunTest() {}
+	public  RunTest() {}
 	@Test
 	public void executaSoapui() {
 	SoapUITestCaseRunner runner = new SoapUITestCaseRunner(); 

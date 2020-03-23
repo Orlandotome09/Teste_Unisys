@@ -108,7 +108,7 @@ public class PageCalculoDePreçosEPrazosDeEntrega {
 	                 
 	                    //  Alternando para a janela 
 	            	List<String> abas = new ArrayList<String>(TestRule.getDriver().getWindowHandles());
-	            	TestRule.getDriver().switchTo().window(abas.get(2));
+	            	TestRule.getDriver().switchTo().window(abas.get(1));
 	            	retorno = TestRule.getDriver().findElement(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr[2]/th")).getText();
 	            
 

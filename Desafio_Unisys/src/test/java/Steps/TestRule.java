@@ -25,7 +25,9 @@ private static WebDriver driver;
 
     @After
     public void afterCenario(){
-        driver.quit();
+    	driver.quit();
+    	driver.close();
+        
     }
 
     public static WebDriver getDriver(){
